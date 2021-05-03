@@ -5,7 +5,7 @@ const port = 8000;
 const app = express();
 
 //set up middlewares
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false}));
 app.use(sassMiddleware({
     src: './assets/scss',
     dest: './assets/css',
@@ -16,6 +16,7 @@ app.use(sassMiddleware({
 
 
 //set up database
+const mongoose = require('./config/mongoose');
 
 //set up static files access
 app.use(express.static('assets'));
@@ -33,5 +34,5 @@ app.listen(port, function(err){
         console.log('Error in starting the server: ', err);
         return;
     }
-    console.log(`The server is up and running at the port: ${port}`);
+    console.log(`Server running at port: ${port}`);
 })

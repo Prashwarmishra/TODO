@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 //set up database path
-mongoose.connect('mongodb://localhost/todo-development');
+mongoose.connect('mongodb://localhost/todo-development', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //establish mongoose connection
 const db = mongoose.connection;
@@ -12,5 +12,5 @@ db.on('error', console.error.bind(console, 'Error connecting to the database'));
 
 //if connection is established, print message on console
 db.once('open', function(){
-    console.log('Connected to database::');
+    console.log('Successfully connected to database.');
 });
