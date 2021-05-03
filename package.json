@@ -1,0 +1,25 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "A simple TODO application to perform CRUD operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prashwarmishra/TODO.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Prashwar Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prashwarmishra/TODO/issues"
+  },
+  "homepage": "https://github.com/Prashwarmishra/TODO#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
