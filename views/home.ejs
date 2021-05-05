@@ -6,8 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/home.css">
+    
 </head>
 <body>
-    <h1>Home | TODO</h1>
+    <div id="wrapper">
+        <div class="page-heading">
+            <h1>Home | TODO</h1>
+        </div>
+        <div class="page-main">
+            <div class="add-tasks">
+                <form action="/add-task" method="POST">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" placeholder="What do you need to do?" required>
+
+                    <label for="category">Category</label>
+                    <select name="category" id="">
+                        <option value="" disabled selected>Choose a category</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="school"> School</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" name="dueDate" required>
+
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+            <div class="show-tasks">
+                <ul>
+                    <form action="/delete-tasks" method="POST">
+                        <button type="submit"> Delete Tasks</button>
+                        <% for(let task of locals.tasks){ %>
+                            <li>
+                                <input type="checkbox" name="task" value="<%= task._id %>">
+                                <%= task.description %>
+                                <%= task.category %>
+                                <%= task.dueDate %>
+                            </li>
+                        <% } %>  
+                    </form>
+                </ul>   
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
