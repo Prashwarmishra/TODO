@@ -1,3 +1,172 @@
 body {
-  background-color: aliceblue;
+  background: #00aa77;
+  background-image: url(/images/bck1.png), url(/images/bck2.png);
+  background-repeat: repeat-x, repeat;
+}
+
+body #wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body #wrapper .page-heading {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+}
+
+body #wrapper .page-main {
+  background-color: white;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  width: 466px;
+  box-shadow: 1px 1px 4px black;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+body #wrapper .page-main ::placeholder {
+  color: black;
+  font-size: 0.9em;
+  opacity: 1;
+  /* Firefox */
+}
+
+body #wrapper .page-main label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+body #wrapper .page-main button {
+  background-image: linear-gradient(to right, #000000 0%, #e74c3c 51%, #000000 100%);
+  position: absolute;
+  height: 42px;
+  width: 138px;
+  font-size: 1em;
+  color: white;
+  background-size: 200%;
+  border-radius: 22px;
+  transition: all 250ms;
+  border: none;
+  outline: none;
+}
+
+body #wrapper .page-main button:hover {
+  background-position: right center;
+}
+
+body #wrapper .page-main input, body #wrapper .page-main label {
+  display: block;
+}
+
+body #wrapper .page-main #task-add-form {
+  display: flex;
+  flex-direction: column;
+}
+
+body #wrapper .page-main #task-add-form .child {
+  margin: 5px 0;
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+}
+
+body #wrapper .page-main #task-add-form .child #task-description {
+  background: none;
+  border: none;
+  width: 355px;
+  border-radius: 0 5px 5px 0;
+  font-size: 1em;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+
+body #wrapper .page-main #task-add-form .child label {
+  padding-left: 1rem;
+  padding-top: 0.3rem;
+}
+
+body #wrapper .page-main #task-add-form .child2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+body #wrapper .page-main #task-add-form .child2 div {
+  padding-left: 1rem;
+}
+
+body #wrapper .page-main #task-add-form .child2 .task-category:after {
+  content: "";
+  border-left: 1px solid gray;
+  height: 52px;
+  top: 76px;
+  color: gray;
+  left: 221px;
+  position: absolute;
+}
+
+body #wrapper .page-main #task-add-form .child2 #task-select {
+  border: none;
+  width: 85%;
+  margin-left: -4px;
+}
+
+body #wrapper .page-main #task-add-form .child2 .task-due-date input {
+  border: none;
+}
+
+body #wrapper .page-main #task-add-form button {
+  top: 145px;
+  left: 15%;
+}
+
+body #wrapper .page-main .button-section {
+  height: 75px;
+}
+
+body #wrapper .page-main .show-tasks button {
+  left: 50%;
+  top: 145px;
+  background-image: linear-gradient(to right, #000000 0%, #53346D 51%, #000000 100%);
+}
+
+body #wrapper .page-main .show-tasks ul {
+  padding: 0;
+}
+
+body #wrapper .page-main .show-tasks ul li {
+  display: grid;
+  grid-template-columns: 1fr 7fr 2fr;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+}
+
+body #wrapper .page-main .show-tasks ul li .task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+body #wrapper .page-main .show-tasks ul li .task-info .task-due-date-stamp {
+  font-size: 0.85em;
+  margin-top: 0.5em;
+}
+
+body #wrapper .page-main .show-tasks ul li .task-category {
+  background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+body #wrapper .disabled {
+  background: gray !important;
 }
