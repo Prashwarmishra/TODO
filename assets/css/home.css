@@ -16,6 +16,10 @@ body #wrapper .page-heading {
   color: white;
 }
 
+body #wrapper .page-heading h1 {
+  letter-spacing: 5px;
+}
+
 body #wrapper .page-main {
   background-color: white;
   border-radius: 10px;
@@ -104,8 +108,8 @@ body #wrapper .page-main #task-add-form .child2 div {
 body #wrapper .page-main #task-add-form .child2 .task-category:after {
   content: "";
   border-left: 1px solid gray;
-  height: 52px;
-  top: 76px;
+  height: 51px;
+  top: 77px;
   color: gray;
   left: 230px;
   position: absolute;
@@ -113,12 +117,14 @@ body #wrapper .page-main #task-add-form .child2 .task-category:after {
 
 body #wrapper .page-main #task-add-form .child2 #task-select {
   border: none;
+  outline: none;
   width: 85%;
   margin-left: -4px;
 }
 
 body #wrapper .page-main #task-add-form .child2 .task-due-date input {
   border: none;
+  outline: none;
 }
 
 body #wrapper .page-main #task-add-form button {
@@ -141,10 +147,16 @@ body #wrapper .page-main .show-tasks ul {
 }
 
 body #wrapper .page-main .show-tasks ul li {
+  background-color: antiquewhite;
   display: grid;
   grid-template-columns: 1fr 7fr 2fr;
   box-sizing: border-box;
   padding: 0.5em 1em;
+}
+
+body #wrapper .page-main .show-tasks ul li .task-checkbox input {
+  cursor: pointer;
+  outline: none;
 }
 
 body #wrapper .page-main .show-tasks ul li .task-info {
@@ -167,6 +179,11 @@ body #wrapper .page-main .show-tasks ul li .categ {
   font-size: 0.8em;
   font-weight: 100;
   margin: 0.4em;
+  border-radius: 5px;
+}
+
+body #wrapper .page-main .show-tasks ul li:hover {
+  background-color: aliceblue;
 }
 
 body #wrapper .disabled {

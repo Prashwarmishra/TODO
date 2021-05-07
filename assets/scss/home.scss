@@ -14,6 +14,9 @@ body{
         .page-heading{
             font-family: 'Noto Sans', sans-serif;
             color: white;
+            h1{
+                letter-spacing: 5px;
+            }
         }
 
         .page-main{
@@ -91,20 +94,22 @@ body{
                     .task-category:after{
                         content: "";
                         border-left: 1px solid gray;
-                        height: 52px;
-                        top: 76px;
+                        height: 51px;
+                        top: 77px;
                         color: gray;
                         left: 230px;
                         position: absolute;
                     }
                     #task-select{
                         border: none;
+                        outline: none;
                         width: 85%;
                         margin-left: -4px;
                     }
                     .task-due-date{
                         input{
                             border: none;
+                            outline: none;
                         }
                     }
                 }
@@ -125,10 +130,17 @@ body{
                 ul{
                     padding: 0;
                     li{
+                        background-color: antiquewhite;
                         display: grid;
                         grid-template-columns: 1fr 7fr 2fr;
                         box-sizing: border-box;
                         padding: 0.5em 1em;
+                        .task-checkbox{
+                            input{
+                                cursor: pointer;
+                                outline: none;
+                            }
+                        }
                         .task-info{
                             display: flex;
                             flex-direction: column;
@@ -147,7 +159,11 @@ body{
                             font-size: 0.8em;
                             font-weight: 100;
                             margin: 0.4em;
+                            border-radius: 5px;
                         }
+                    }
+                    li:hover{
+                        background-color: aliceblue;
                     }
                 }
             }

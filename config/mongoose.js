@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 //set up database path
-mongoose.connect('mongodb://localhost/todo-development', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/todo-development', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
 //establish mongoose connection
 const db = mongoose.connection;

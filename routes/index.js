@@ -8,5 +8,6 @@ router.get('/', homeController.home);
 router.post('/add-task', homeController.addTask);
 router.post('/delete-tasks', homeController.deleteTask);
 
+router.use('/api', require('./api'));
 
 module.exports = router;
