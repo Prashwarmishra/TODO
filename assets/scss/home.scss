@@ -27,7 +27,7 @@ body{
               }
             font-family: 'Roboto', sans-serif;
             width: 466px;
-            box-shadow: 1px 1px 4px black;
+            box-shadow: 1px 1px 20px black;
             padding: 1em 0;
             display: flex;
             flex-direction: column;
@@ -45,7 +45,7 @@ body{
                 font-size: 1em;
                 color: white;
                 background-size: 200%;
-                border-radius: 22px;
+                border-radius: 10px;
                 transition: all 250ms;
                 border: none;
                 outline: none;
@@ -94,7 +94,7 @@ body{
                         height: 52px;
                         top: 76px;
                         color: gray;
-                        left: 221px;
+                        left: 230px;
                         position: absolute;
                     }
                     #task-select{
@@ -110,7 +110,7 @@ body{
                 }
                 button{
                     top: 145px;
-                    left: 15%;
+                    left: 80px;
                 }
             }
             .button-section{
@@ -118,7 +118,7 @@ body{
             }
             .show-tasks{
                 button{
-                    left: 50%;
+                    right: 80px;
                     top: 145px;
                     background-image: linear-gradient(to right, #000000 0%, #53346D 51%, #000000 100%);
                 }
@@ -133,11 +133,12 @@ body{
                             display: flex;
                             flex-direction: column;
                             .task-due-date-stamp{
-                                font-size: 0.85em;
+                                font-size: 0.8em;
                                 margin-top: 0.5em;
                             }
                         }
-                        .task-category{
+                        .categ{
+                            color: white;
                             background-color: coral;
                             display: flex;
                             align-items: center;
@@ -145,6 +146,7 @@ body{
                             text-transform: uppercase;
                             font-size: 0.8em;
                             font-weight: 100;
+                            margin: 0.4em;
                         }
                     }
                 }

@@ -2,8 +2,6 @@
     let checkBoxes = document.querySelectorAll('.task-checkbox');
     let deleteTaskButton = document.querySelector('#delete-task-button');
 
-    console.log(checkBoxes);
-
     let boxesChecked = 0;
 
     function disableButton(elem){
@@ -24,7 +22,6 @@
             let checkBoxInput = checkBox.querySelector('input');
             if(checkBoxInput.checked){
                 boxesChecked++;
-                console.log('Triggered');
                 let taskInfo = checkBox.nextElementSibling.querySelectorAll('span');
                 taskInfo.forEach(task => {
                     task.style.textDecoration = "line-through";

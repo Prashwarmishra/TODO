@@ -30,6 +30,7 @@
                             <select name="category" id="task-select">
                                 <option value="" disabled selected>Choose a category</option>
                                 <option value="work">Work</option>
+                                <option value="cleaning">Cleaning</option>
                                 <option value="personal">Personal</option>
                                 <option value="school"> School</option>
                                 <option value="other">Other</option>
@@ -63,7 +64,7 @@
                                     <span><%= task.description %></span>
                                     <span class="task-due-date-stamp"><%= task.dueDate %></span>
                                 </div>
-                                <div class="task-category">
+                                <div class="categ">
                                     <span><%= task.category %></span>
                                 </div>
                             </li>
@@ -75,5 +76,7 @@
     </div>
     <script src="/js/setDate.js"></script>
     <script src="/js/activateDeleteButton.js"></script>
+    <script src="/js/taskColor.js"></script>
+
 </body>
 </html>
