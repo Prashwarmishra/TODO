@@ -147,7 +147,6 @@ body #wrapper .page-main .show-tasks ul {
 }
 
 body #wrapper .page-main .show-tasks ul li {
-  background-color: antiquewhite;
   display: grid;
   grid-template-columns: 1fr 7fr 2fr;
   box-sizing: border-box;
@@ -183,7 +182,7 @@ body #wrapper .page-main .show-tasks ul li .categ {
 }
 
 body #wrapper .page-main .show-tasks ul li:hover {
-  background-color: aliceblue;
+  background-color: lightskyblue;
 }
 
 body #wrapper .disabled {

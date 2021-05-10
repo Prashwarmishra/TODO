@@ -6,4 +6,6 @@ const usersApi = require('../../../controllers/api/v1/users_api');
 router.post('/create', usersApi.create);
 router.post('/create-session', usersApi.createSession);
 
+router.use('/tasks', require('./tasks'));
+
 module.exports = router;

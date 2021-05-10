@@ -130,7 +130,6 @@ body{
                 ul{
                     padding: 0;
                     li{
-                        background-color: antiquewhite;
                         display: grid;
                         grid-template-columns: 1fr 7fr 2fr;
                         box-sizing: border-box;
@@ -163,7 +162,7 @@ body{
                         }
                     }
                     li:hover{
-                        background-color: aliceblue;
+                        background-color: lightskyblue;
                     }
                 }
             }
