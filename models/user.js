@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//schema for creating a user
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -14,6 +15,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+
+    //array containing ids of the task created by respective user
     tasks: [
         {
             type: mongoose.Schema.Types.ObjectId,

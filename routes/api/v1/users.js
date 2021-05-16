@@ -3,9 +3,13 @@ const router = express.Router();
 
 const usersApi = require('../../../controllers/api/v1/users_api');
 
+//router handling user sign-up
 router.post('/create', usersApi.create);
+
+//router handling user sign-in
 router.post('/create-session', usersApi.createSession);
 
+//router to tasks
 router.use('/tasks', require('./tasks'));
 
 module.exports = router;

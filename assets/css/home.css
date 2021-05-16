@@ -188,3 +188,24 @@ body #wrapper .page-main .show-tasks ul li:hover {
 body #wrapper .disabled {
   background: gray !important;
 }
+
+body #wrapper .selected {
+  text-decoration: line-through;
+}
+
+body .task-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+body .task-controls .task-filter > span {
+  margin: 0 3px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+body .task-controls .task-filter > span:hover {
+  font-weight: bold;
+}

@@ -170,5 +170,22 @@ body{
         .disabled{
             background: gray !important;
         }
+        .selected{
+            text-decoration: line-through;
+        }
+    }
+    .task-controls{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        font-size: 0.9rem;
+        .task-filter>span{
+            margin: 0 3px;
+            cursor: pointer;
+            transition: all 250ms;
+        }
+        .task-filter>span:hover{
+            font-weight: bold;
+        }
     }
 }

@@ -13,18 +13,29 @@
 </head>
 <body>
     <div id="wrapper">
+
+        <!-- page-heading -->
         <div class="page-heading">
             <h1>TODO</h1>
         </div>
+
+        <!-- page-main-section -->
         <div class="page-main">
+
             <div class="add-tasks">
+
+                <!-- form to add tasks -->
                 <form action="/add-task" method="POST" id="task-add-form">
+
+                    <!-- add description -->
                     <div class="child">
                         <label for="description">Description</label>
                         <input type="text" name="description" id="task-description" placeholder="What do you need to do?" required>
                     </div>
 
                     <div class="child2">
+
+                        <!-- add category -->
                         <div class="task-category">
                             <label for="category">Category</label>
                             <select name="category" id="task-select">
@@ -37,12 +48,14 @@
                             </select>
                         </div>
 
+                        <!-- add-due-date -->
                         <div class="task-due-date">
                             <label for="dueDate">Due Date</label>
                             <input type="date" name="dueDate" required>
                         </div>
                     </div>
 
+                    <!-- submit button -->
                     <button type="submit"> <span><i class="fas fa-plus"></i></span> Add Task</button>
                 </form>
             </div>
@@ -51,19 +64,28 @@
                 
             </div>
 
+            <!-- section showing tasks -->
             <div class="show-tasks">
                 <ul>
                     <form action="/delete-tasks" method="POST">
+
+                        <!-- button to delete task/tasks -->
                         <button type="submit" id="delete-task-button"> <span><i class="fas fa-trash-alt"></i></span> Delete Tasks</button>
                         <% for(let task of locals.tasks){ %>
                             <li>
+
+                                <!-- checkbox to delete task -->
                                 <div class="task-checkbox">
                                     <input type="checkbox" name="task" value="<%= task._id %>">
                                 </div>
+
+                                <!-- task-description -->
                                 <div class="task-info">
                                     <span><%= task.description %></span>
                                     <span class="task-due-date-stamp"><%= task.dueDate %></span>
                                 </div>
+
+                                <!-- task-category -->
                                 <div class="categ">
                                     <span><%= task.category %></span>
                                 </div>
@@ -72,11 +94,22 @@
                     </form>
                 </ul>   
             </div>
+
+            <div class="task-controls">
+               <div>
+                   <span class="task-left">0</span><span>&nbsp;tasks left</span>
+               </div> 
+               <div class="task-filter">
+                    <span class="all-tasks">All</span>
+                    <span class="completed-tasks">Completed</span>
+                    <span class="uncompleted-tasks">Uncomplete</span>
+               </div>
+            </div>
         </div>
     </div>
     <script src="/js/setDate.js"></script>
     <script src="/js/activateDeleteButton.js"></script>
     <script src="/js/taskColor.js"></script>
-
+    <script src="/js/script.js"></script>
 </body>
 </html>
