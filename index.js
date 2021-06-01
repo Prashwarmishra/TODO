@@ -1,6 +1,6 @@
 const express = require('express');
 const sassMiddleware = require('node-sass-middleware');
-const port = 8000;
+const port = process.env.PORT || 8000;
 const passport = require('passport');
 const passportJWT = require('./config/passport-jwt-strategy');
 
