@@ -51,6 +51,7 @@ module.exports.getTodo = async function (req, res) {
   try {
     //fetch all the tasks from the array of tasks in user schema
     let tasks = await User.findById(req.user.id).populate("tasks");
+    console.log("tasks", tasks);
     return res.status(200).json({
       success: true,
       message: "Tasks fetched successfully!",
